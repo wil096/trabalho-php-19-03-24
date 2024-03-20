@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <style>
+        body {
+            background-color: orange;
+            font-family: Arial, sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="submit"] {
+            padding: 10px;
+            width: calc(100% - 22px);
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid white;
+        }
+
+        th {
+            background-color: white;
+            color: orange;
+            font-weight: bold;
+        }
+
+        td {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Biblioteca</h1>
+        <form method="POST">
+            <input type="text" name="titulo" placeholder="Título do livro">
+            <input type="text" name="autor" placeholder="Autor do livro">
+            <input type="submit" value="Adicionar Livro">
+        </form>
+        <table>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+            </tr>
+            <!-- Aqui serão exibidos os livros dinamicamente -->
+        </table>
+        <p>Esta página foi visitada <?php echo $_COOKIE['visitas'] ?? 0; ?> vezes.</p>
+    </div>
+</body>
+</html>
